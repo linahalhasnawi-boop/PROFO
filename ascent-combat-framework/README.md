@@ -142,7 +142,26 @@ ACF ships targeting UE 5.5. Project target is 5.7. Three areas to watch when por
 
 **MSVC toolchain ban carryover.** Same 5.7 UBT toolchain ban (MSVC 14.44 explicitly rejected) applies. If the team's build machine only has 14.44 installed, ACF won't even start compiling. Fix is documented in the [agent kit port notes](../unreal-claude-agent-kit/) — install MSVC 14.38.33130 via VS Installer individual components.
 
-Estimated port effort: 1–2 days of focused work to get all 11 retained modules clean-compiling on 5.7, plus a half day to verify runtime behavior (input binding, anim notify timing) in PIE.
+### Verified during initial open in 5.7
+
+The official ACF sample project (`ACFSample.uproject`) was opened in 5.7 with the engine association manually upgraded. Blueprint asset compilation surfaced specific, named errors — directly the kind of API drift the analysis above predicted:
+
+- **`ACF_HorseMount_BP`** — references a variable named `Aiming` that no longer exists on the host class, and calls a function `EnableCrosshair` no longer present on `ACFHUD`. The ACF plugin's class API was tightened between the marketplace sample (built against 5.5 ACF) and the current ACF release. Fix: refresh nodes + rebind variable + replace deleted function calls.
+- **`TriggerActionOnRider` node** — `Context String` input pin removed. Refresh-all-nodes cleans it up.
+- **`ACFFrostProjectileBP`** — `On Actor Damaged (CollisionComp)` event has no valid matching component, likely from a component renaming upstream.
+
+All three are blueprint-level fixes, not C++ port work.
+
+The plugin's C++ modules were not exercised by a clean build during this open — the editor raised a multithread-access ensure-and-crash before UBT ran, but the crash callstack points at `GraphNUnrealPlugin` (an unrelated third-party plugin in the engine install), not at any ACF module. 5.7's `FMTAccessDetector` is stricter than 5.5's; that plugin needs its own port. ACF C++ compile remains unverified pending the third-party crash resolution, but no ACF-side compile errors have surfaced yet.
+
+### Estimated port effort (revised against observations)
+
+| Surface | Estimate | Confidence |
+|---|---|---|
+| C++ modules clean-compile on 5.7 | 4–8 hours | medium (BP errors don't suggest deep C++ drift, but unverified) |
+| Sample BP cleanup (refresh + variable rebind + reroute removed function calls) | 1–2 hours | high (specific failures named) |
+| Runtime PIE verification (input binding, anim notify timing) | 4 hours | high |
+| **Total** | **~1 working day** | revised down from the initial 1–2 day estimate |
 
 ### Custom extension modules (scoped, not yet implemented)
 
