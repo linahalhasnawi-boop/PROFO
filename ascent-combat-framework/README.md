@@ -8,6 +8,16 @@
 
 ---
 
+## Demo
+
+<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/ascent-combat-framework/media/demo-combat-showcase.mp4" controls width="100%"></video>
+
+> ▶ [Watch combat showcase (7 MB MP4)](./media/demo-combat-showcase.mp4)
+
+ACF marketplace sample running in UE 5.5, captured during initial port verification. Shows the framework's stock combat interactions — combo system, hit reactions, lock-on targeting, animation-notify-driven attack windows. The intent of the recording is to confirm the framework loads cleanly and combat behaves as documented before any custom extension work begins; it is the upstream sample, not original gameplay.
+
+---
+
 ## What ACF is, and why look at it
 
 ACF is a commercial UE5 plugin that ships a complete action-RPG runtime as 21 self-contained modules — combat, actions, AI, RPG stats, inventory, crafting, mounts, executions, targeting, save/load, status effects, vehicles. Each system is built behind an interface and exposed via components, so you can pull in the three or four you need and ignore the rest.
