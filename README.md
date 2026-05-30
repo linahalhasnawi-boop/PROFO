@@ -16,6 +16,12 @@ Architecture analysis and integration plan for evaluating Pask / Dark Tower Inte
 
 **Highlights:** module dependency graph, interface-spine architectural pattern, anim-notify-driven action lifecycle, why ACF over rolling custom GAS, 5.5→5.7 port surface.
 
+### [SKG Shooter Framework — Integration Plan](./skg-shooter-framework/)
+
+Architecture analysis and integration plan for evaluating Sneaky Kitty Game Dev's *SKG Shooter Framework* as the weapon foundation for a multiplayer FPS project. 16 modules, 171 C++ files mapped against a UE 5.7 target; the procedural animation pattern and modular attachment architecture broken down with scoped extensions for ammo economy and tactical reload.
+
+**Highlights:** procedural weapon animation (no hand-keying), socket-based attachment composition, why SKG over Lyra/custom, 5.6→5.7 port surface, upstream descriptor defect spotted.
+
 ---
 
 ## License
