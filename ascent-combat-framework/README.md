@@ -22,7 +22,15 @@
 
 > ▶ [Watch swimming clip (3 MB MP4)](./media/demo-swimming.mp4) — Water + Landmass plugin interaction, swimming state transitions on the `CharacterController` base.
 
-Both clips are the ACF marketplace sample running in UE 5.5, captured during initial port verification. Intent: confirm the framework loads cleanly and core gameplay systems behave as documented before any custom extension work begins. Upstream sample content, not original gameplay.
+### Mount system (horse)
+
+<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/ascent-combat-framework/media/demo-mount-horse.mp4" controls width="100%"></video>
+
+> ▶ [Watch horse mount clip (3 MB MP4)](./media/demo-mount-horse.mp4) — `MountSystem` + `CombinedAnimationsSystem` working together: mounted control, dismount synced animation, rider-action passthrough.
+
+`MountSystem` is marked **out of scope for v1** in the module subset above. This clip is part of evaluating whether to scope it back in for v2 — the system works, the animations sync cleanly, and the cost of integration is now a known quantity rather than a guess.
+
+All three clips are the ACF marketplace sample running in UE 5.5, captured during initial port verification. Intent: confirm the framework loads cleanly and core gameplay systems behave as documented before any custom extension work begins. Upstream sample content, not original gameplay.
 
 ---
 
