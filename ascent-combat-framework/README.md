@@ -28,9 +28,15 @@
 
 > ▶ [Watch horse mount clip (3 MB MP4)](./media/demo-mount-horse.mp4) — `MountSystem` + `CombinedAnimationsSystem` working together: mounted control, dismount synced animation, rider-action passthrough.
 
-`MountSystem` is marked **out of scope for v1** in the module subset above. This clip is part of evaluating whether to scope it back in for v2 — the system works, the animations sync cleanly, and the cost of integration is now a known quantity rather than a guess.
+### Vehicle system (car)
 
-All three clips are the ACF marketplace sample running in UE 5.5, captured during initial port verification. Intent: confirm the framework loads cleanly and core gameplay systems behave as documented before any custom extension work begins. Upstream sample content, not original gameplay.
+<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/ascent-combat-framework/media/demo-vehicle-car.mp4" controls width="100%"></video>
+
+> ▶ [Watch vehicle drive clip (4 MB MP4)](./media/demo-vehicle-car.mp4) — `VehicleSystem` on top of Chaos Vehicles: enter/exit, driving control, mounted-pawn pattern reused from the creature mounts.
+
+Both `MountSystem` and `VehicleSystem` are marked **out of scope for v1** in the module subset above. These clips are part of evaluating whether to scope either back in for v2 — both systems work, both reuse the same mounted-pawn pattern under the hood, and the cost of integration is now a known quantity rather than a guess.
+
+All four clips are the ACF marketplace sample running in UE 5.5, captured during initial port verification. Intent: confirm the framework loads cleanly and core gameplay systems behave as documented before any custom extension work begins. Upstream sample content, not original gameplay.
 
 ---
 
