@@ -44,7 +44,15 @@ Both `MountSystem` and `VehicleSystem` are marked **out of scope for v1** in the
 
 The interactable interface is the cleanest example of the spine-driven architecture in action: every interactable type lives in its own module (InventorySystem for items, AIFramework for NPCs, etc.) and none of them depend on each other — they only depend on the interface contract in the spine.
 
-All five clips are the ACF marketplace sample running in UE 5.5, captured during initial port verification. Intent: confirm the framework loads cleanly and core gameplay systems behave as documented before any custom extension work begins. Upstream sample content, not original gameplay.
+### Status effects
+
+<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/ascent-combat-framework/media/demo-status-effects.mp4" controls width="100%"></video>
+
+> ▶ [Watch status effects clip (5 MB MP4)](./media/demo-status-effects.mp4) — `StatusEffectSystem` applying buffs, debuffs, and damage-over-time on actors via the ARS attribute pipeline.
+
+`StatusEffectSystem` is **in scope for v1** (foundation layer in the architecture diagram). The interesting architectural property visible here: status effects are data-driven instances that subscribe to attribute-change events on `AdvancedRPGSystem`. Adding a new effect is a data-asset edit, not a new C++ class — same procedural-over-keyed instinct the SKG writeup calls out for weapon animation. Same insight, different problem domain.
+
+All six clips are the ACF marketplace sample running in UE 5.5, captured during initial port verification. Intent: confirm the framework loads cleanly and core gameplay systems behave as documented before any custom extension work begins. Upstream sample content, not original gameplay.
 
 ---
 
