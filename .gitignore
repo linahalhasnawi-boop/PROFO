@@ -1,0 +1,21 @@
+# Editor / IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Unreal generated (in case anyone clones into a UE project context)
+Binaries/
+Intermediate/
+DerivedDataCache/
+Saved/
+*.sln
+*.suo
+*.user
+
+# Local scratch
+scratch/
+notes.local.md
