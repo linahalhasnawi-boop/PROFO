@@ -36,7 +36,15 @@
 
 Both `MountSystem` and `VehicleSystem` are marked **out of scope for v1** in the module subset above. These clips are part of evaluating whether to scope either back in for v2 — both systems work, both reuse the same mounted-pawn pattern under the hood, and the cost of integration is now a known quantity rather than a guess.
 
-All four clips are the ACF marketplace sample running in UE 5.5, captured during initial port verification. Intent: confirm the framework loads cleanly and core gameplay systems behave as documented before any custom extension work begins. Upstream sample content, not original gameplay.
+### Interactables
+
+<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/ascent-combat-framework/media/demo-interactables.mp4" controls width="100%"></video>
+
+> ▶ [Watch interactables clip (1 MB MP4)](./media/demo-interactables.mp4) — pickup, door/container, NPC interaction. All concrete actors implement the same `IACF_Interactable` interface defined in `AscentCoreInterfaces` — the spine module discussed in the Architecture section above. Same pattern, different actor classes.
+
+The interactable interface is the cleanest example of the spine-driven architecture in action: every interactable type lives in its own module (InventorySystem for items, AIFramework for NPCs, etc.) and none of them depend on each other — they only depend on the interface contract in the spine.
+
+All five clips are the ACF marketplace sample running in UE 5.5, captured during initial port verification. Intent: confirm the framework loads cleanly and core gameplay systems behave as documented before any custom extension work begins. Upstream sample content, not original gameplay.
 
 ---
 
