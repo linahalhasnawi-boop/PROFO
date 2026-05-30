@@ -1,10 +1,6 @@
-# Ascent Combat Framework — Integration Plan
+# Project Sariya — Action RPG Foundation
 
-> Architecture analysis and integration plan for evaluating [Pask / Dark Tower Interactive's *Ascent Combat Framework* (ACF)](https://www.unrealengine.com/marketplace/en-US/product/19f41df17ac5412c96ac38cbaeb43810) as the combat foundation for an action RPG project on UE 5.7. 21 runtime modules, 462 C++ files mapped, port surface scoped.
-
-**Status:** evaluation + integration plan complete. Custom extension modules scoped (not yet implemented in this repo).
-
-**Browse:** → [`media/`](./media/) — demo GIFs and screenshots (drop zone).
+> Third-person action RPG on UE 5.7. Combat foundation: [Pask / Dark Tower Interactive's *Ascent Combat Framework* (ACF)](https://www.unrealengine.com/marketplace/en-US/product/19f41df17ac5412c96ac38cbaeb43810) — 21 runtime modules ported from 5.5 to 5.7, scope cut to the 11 the game needs, two custom extension modules planned on top. The clips below are the foundation systems verified working under the port — what Sariya inherits before any custom work begins.
 
 ---
 
@@ -12,25 +8,25 @@
 
 ### Combat
 
-<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/ascent-combat-framework/media/demo-combat-showcase.mp4" controls width="100%"></video>
+<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/project-sariya/media/demo-combat-showcase.mp4" controls width="100%"></video>
 
 > ▶ [Watch combat showcase (7 MB MP4)](./media/demo-combat-showcase.mp4) — combo system, hit reactions, lock-on targeting, animation-notify-driven attack windows.
 
 ### Water / swimming
 
-<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/ascent-combat-framework/media/demo-swimming.mp4" controls width="100%"></video>
+<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/project-sariya/media/demo-swimming.mp4" controls width="100%"></video>
 
 > ▶ [Watch swimming clip (3 MB MP4)](./media/demo-swimming.mp4) — Water + Landmass plugin interaction, swimming state transitions on the `CharacterController` base.
 
 ### Mount system (horse)
 
-<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/ascent-combat-framework/media/demo-mount-horse.mp4" controls width="100%"></video>
+<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/project-sariya/media/demo-mount-horse.mp4" controls width="100%"></video>
 
 > ▶ [Watch horse mount clip (3 MB MP4)](./media/demo-mount-horse.mp4) — `MountSystem` + `CombinedAnimationsSystem` working together: mounted control, dismount synced animation, rider-action passthrough.
 
 ### Vehicle system (car)
 
-<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/ascent-combat-framework/media/demo-vehicle-car.mp4" controls width="100%"></video>
+<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/project-sariya/media/demo-vehicle-car.mp4" controls width="100%"></video>
 
 > ▶ [Watch vehicle drive clip (4 MB MP4)](./media/demo-vehicle-car.mp4) — `VehicleSystem` on top of Chaos Vehicles: enter/exit, driving control, mounted-pawn pattern reused from the creature mounts.
 
@@ -38,7 +34,7 @@ Both `MountSystem` and `VehicleSystem` are marked **out of scope for v1** in the
 
 ### Interactables
 
-<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/ascent-combat-framework/media/demo-interactables.mp4" controls width="100%"></video>
+<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/project-sariya/media/demo-interactables.mp4" controls width="100%"></video>
 
 > ▶ [Watch interactables clip (1 MB MP4)](./media/demo-interactables.mp4) — pickup, door/container, NPC interaction. All concrete actors implement the same `IACF_Interactable` interface defined in `AscentCoreInterfaces` — the spine module discussed in the Architecture section above. Same pattern, different actor classes.
 
@@ -46,7 +42,7 @@ The interactable interface is the cleanest example of the spine-driven architect
 
 ### Status effects
 
-<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/ascent-combat-framework/media/demo-status-effects.mp4" controls width="100%"></video>
+<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/project-sariya/media/demo-status-effects.mp4" controls width="100%"></video>
 
 > ▶ [Watch status effects clip (5 MB MP4)](./media/demo-status-effects.mp4) — `StatusEffectSystem` applying buffs, debuffs, and damage-over-time on actors via the ARS attribute pipeline.
 
@@ -244,7 +240,7 @@ You'll find:
 - Scoped specs for the two planned custom extension modules.
 
 You won't find:
-- ACF source code. To evaluate or license the framework, see the [Unreal Marketplace listing](https://www.unrealengine.com/marketplace/en-US/product/19f41df17ac5412c96ac38cbaeb43810) or the [ACF wiki](https://www.wikiful.com/@ACF/ascent-combat-framework-wiki/ascent-combat-framework).
+- ACF source code. To evaluate or license the framework, see the [Unreal Marketplace listing](https://www.unrealengine.com/marketplace/en-US/product/19f41df17ac5412c96ac38cbaeb43810) or the [ACF wiki](https://www.wikiful.com/@ACF/project-sariya-wiki/project-sariya).
 - Project assets from the action RPG itself (private repo).
 
 ---

@@ -14,7 +14,7 @@ Most of my recent work is on UE5 — cinematic trailer production, custom plugin
 ## Featured projects
 
 - **[Unreal Claude Agent Kit](./unreal-claude-agent-kit/)** — fork + port of Betide Studio's Agent Integration Kit; custom landscape, sequencer, and Errant Biomes modules.
-- **[Ascent Combat Framework — Integration Plan](./ascent-combat-framework/)** — 21-module action-RPG framework evaluated as the combat foundation for a Soulslike project.
+- **[Project Sariya — Action RPG Foundation](./project-sariya/)** — third-person action RPG built on the 21-module Ascent Combat Framework, scope-cut and ported 5.5 → 5.7, with six demo clips of the foundation systems verified working.
 - **[SKG Shooter Framework — Integration Plan](./skg-shooter-framework/)** — procedural-animation FPS framework evaluated for a multiplayer shooter project.
 
 ## Stack
