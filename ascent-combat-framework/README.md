@@ -10,11 +10,19 @@
 
 ## Demo
 
+### Combat
+
 <video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/ascent-combat-framework/media/demo-combat-showcase.mp4" controls width="100%"></video>
 
-> ▶ [Watch combat showcase (7 MB MP4)](./media/demo-combat-showcase.mp4)
+> ▶ [Watch combat showcase (7 MB MP4)](./media/demo-combat-showcase.mp4) — combo system, hit reactions, lock-on targeting, animation-notify-driven attack windows.
 
-ACF marketplace sample running in UE 5.5, captured during initial port verification. Shows the framework's stock combat interactions — combo system, hit reactions, lock-on targeting, animation-notify-driven attack windows. The intent of the recording is to confirm the framework loads cleanly and combat behaves as documented before any custom extension work begins; it is the upstream sample, not original gameplay.
+### Water / swimming
+
+<video src="https://github.com/linahalhasnawi-boop/PROFO/raw/main/ascent-combat-framework/media/demo-swimming.mp4" controls width="100%"></video>
+
+> ▶ [Watch swimming clip (3 MB MP4)](./media/demo-swimming.mp4) — Water + Landmass plugin interaction, swimming state transitions on the `CharacterController` base.
+
+Both clips are the ACF marketplace sample running in UE 5.5, captured during initial port verification. Intent: confirm the framework loads cleanly and core gameplay systems behave as documented before any custom extension work begins. Upstream sample content, not original gameplay.
 
 ---
 
