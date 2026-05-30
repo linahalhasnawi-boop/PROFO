@@ -4,6 +4,8 @@
 
 **Status:** evaluation + integration plan complete. Custom extension modules scoped (not yet implemented in this repo).
 
+**Browse:** → [`media/`](./media/) — demo GIFs and screenshots (drop zone).
+
 ---
 
 ## What SKG is, and why look at it

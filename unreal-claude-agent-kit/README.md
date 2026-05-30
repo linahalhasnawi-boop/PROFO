@@ -4,6 +4,11 @@
 
 **Status:** in-progress port + extension. ACP transport compiles on 5.7. Custom landscape + sequencer modules are landing next.
 
+**Browse:**
+- → [`src/AIK_Landscape/`](./src/AIK_Landscape/) — reference implementation of one of the custom modules (real C++, not pseudo-code).
+- → [`docs/tool-surface.md`](./docs/tool-surface.md) — full agent tool surface spec.
+- → [`media/`](./media/) — demo GIFs and screenshots (drop zone).
+
 ---
 
 ## What it is

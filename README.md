@@ -1,6 +1,10 @@
 # Portfolio — Lina Hal Hasnawi
 
-Senior engineer working on Unreal Engine 5 game development, AI agent integrations, and full-stack web. Each project below is a writeup of real engineering work — not a republish of upstream source. Where I've forked or built on a commercial product, I credit the upstream and disclose what's mine vs. what isn't.
+> Senior engineer · Unreal Engine 5 · AI agent integrations · full-stack web
+
+I evaluate large commercial frameworks, port them across engine versions, and extend them with custom modules where they fall short. Each project below is a writeup of real engineering work — not a republish of upstream source. Where I've forked or built on a commercial product, I credit the upstream and disclose what's mine vs. what isn't.
+
+→ **[About me](./ABOUT.md)** for the short bio · **[github.com/linahalhasnawi-boop](https://github.com/linahalhasnawi-boop)** for everything else.
 
 ## Projects
 
